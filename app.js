@@ -3,10 +3,22 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+var config = require('./config/configuration');
 
 var app = express();
+
+// for mongoose api
+
+
+// cors
+const cors = require("cors");
+var corsOptions = {origin: "http://localhost:8081"};
+
+app.use(cors(corsOptions));
+
+//routes
+var indexRouter = require('./routes/router.index');
+var usersRouter = require('./routes/router.users');
 
 app.use(logger('dev'));
 app.use(express.json());
