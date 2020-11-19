@@ -7,7 +7,7 @@ const db = {};
 db.mongoose = mongoose;
 db.url_local = config.db.local_db;
 db.url = config.db.server_db;
-db.tutorial = require("./tutorial.model.js");
+db.tutorials = require("./tutorial.model.js")(mongoose);
 
 
 module.exports = db; 

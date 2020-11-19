@@ -4,7 +4,7 @@
  * Module dependencies.
  */
 
-var app = require('../app');
+var app = require('./app');
 var debug = require('debug')('api:server');
 var http = require('http');
 
@@ -26,7 +26,6 @@ var server = http.createServer(app);
  */
 
 server.listen(port);
-console.log('Listen on port' + port);
 server.on('error', onError);
 server.on('listening', onListening);
 
