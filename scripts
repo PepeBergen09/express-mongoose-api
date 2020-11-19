@@ -1,0 +1,5 @@
+touch server.js
+mkdir api config && touch config/db.config.js
+cd api && mkdir controllers models routes
+touch controllers/index.controller.js models/index.model.js routes/index.routes.js 
+touch controllers/tutorials.controller.js models/tutorials.model.js routes/tutorials.route.js 
